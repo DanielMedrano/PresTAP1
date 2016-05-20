@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:weightSum="1">
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    />
+    android:text="Nombre de la persona"
+    android:textSize="30sp"
+    android:singleLine="true"
+    android:textColor="#FF3AEADC" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textres"
+        android:layout_weight="0.06"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del libro "
+        android:id="@+id/textView"
+        android:textSize="30dp"
+        android:textColor="#FF3AEADC" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView2"
+        android:layout_weight="0.06" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dp"
+         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/set"
+        android:text="set"
+
+        />
+
 </LinearLayout>
