@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="mx.edu.ittepic.judamedranoba.prestap.nuevo">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="Nombre de la persona :"
+    android:textColor="#000000"
+    android:textSize="25dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    />
+  <EditText
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginTop="5dp"
+      android:textSize="20sp"
+      android:layout_marginLeft="10dp"
+      />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Nombre del objeto :"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:textSize="18dp"
+        android:layout_marginLeft="10dp"
+        />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Descripción del objeto"
+      android:layout_marginTop="10dp"
+      android:layout_marginLeft="20dp"
+      android:textSize="25dp"
+      android:textColor="#000000"/>
+  <EditText
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginLeft="10dp"
+      android:textSize="18dp"
+      android:layout_marginTop="5dp"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginTop="10dp"
+      android:textSize="25dp"
+      android:layout_marginLeft="20dp"
+      android:text="Fecha de prestamo :"
+      android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:textSize="25dp"
+        android:id="@+id/fechaSis"
+        android:layout_marginLeft="10dp"
+        android:text="  "
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:text="Fecha de devolución :"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:textSize="25dp"
+        android:id="@+id/campoFecha"
+        android:layout_marginLeft="10dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Seleccionar fecha"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/butonFecha"
+        android:onClick="mostrarcalendario"
+        android:nestedScrollingEnabled="true" />
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Guardar"
+      android:layout_marginRight="15dp"
+      android:id="@+id/guardar"
+      android:layout_gravity="right" />
+</LinearLayout>
