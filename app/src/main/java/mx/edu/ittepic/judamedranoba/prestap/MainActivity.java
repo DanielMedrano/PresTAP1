@@ -13,10 +13,14 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+    DBHelper mydb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+     mydb = new DBHelper(this);
+
 
     }
 
@@ -25,8 +29,8 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-    public void nuevoprestamo(View view){
-        Intent intent = new Intent(this,nuevo_prestamo.class);
+    public void nuevo(View view){
+        Intent intent = new Intent(this,nuevo.class);
         startActivity(intent);
     }
 

@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".acerca"></activity>
+        <activity android:name=".nuevo"></activity>
     </application>
 
 </manifest>
