@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,17 +8,56 @@
 
     <TextView
         android:id="@+id/tex"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Esta aplicación fue realizada para fines educativos de la materia de TAP por alumnos del ITTepic."
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
-        android:layout_margin="20dp"/>
+        android:layout_marginTop="15dp"/>
 
-    <ImageView
-        android:id="@+id/logo"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:background="@drawable/logo" />
+        android:layout_height="wrap_content">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleY="0.45"
+            android:layout_gravity="center"
+            android:background="@drawable/logo" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tex2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tex3"
+        android:text="Eduardo Antonio Barbosa Ortiz"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tex3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tex4"
+        android:text="Juan José Martínez Alvarez"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tex4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Juan Daniel Medrano Barajas   "
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+</RelativeLayout>
