@@ -4,12 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
     android:background="#FFFFFF"
+    android:layout_weight="0"
     tools:context="mx.edu.ittepic.judamedranoba.prestap.MainActivity">
 
     <TextView
@@ -18,49 +14,62 @@
         android:text="Bienvenido"
         android:id="@+id/txtBienvenida"
         android:textSize="50sp"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:textColor="#000000"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:background="@drawable/logo"
-        android:id="@+id/imageView"
+    <RelativeLayout
         android:layout_below="@+id/txtBienvenida"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/btnuevo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/logo"
+            android:id="@+id/imageView"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nuevo Prestamo"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="#F4FF81"
-        android:id="@+id/button2"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/btnuevo"
+        android:layout_above="@+id/btnpresta"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Consultar Prestamos"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="#90CAF9"
-        android:id="@+id/button3"
-        android:layout_below="@+id/imageView"
+        android:id="@+id/btnpresta"
+        android:layout_above="@+id/btnacerca"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="85dp" />
+        android:layout_marginBottom="10dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Acerca de"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="#FFCC80"
-        android:id="@+id/button"
+        android:id="@+id/btnacerca"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginBottom="5dp"/>
 
 </RelativeLayout>
