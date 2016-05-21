@@ -35,7 +35,7 @@
         android:layout_centerVertical="true"
         android:layout_marginBottom="10dp"
         android:background="#F4FF81"
-        android:onClick="nuevoprestamo"/>
+        android:onClick="nuevo"/>
 
     <Button
         android:id="@+id/btnCprestamo"
