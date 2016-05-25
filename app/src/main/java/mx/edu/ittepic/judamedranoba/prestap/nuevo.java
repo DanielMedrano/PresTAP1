@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.app.DatePickerDialog;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -22,7 +24,7 @@ public class nuevo extends Activity {
     private int año;
     private int mes;
     private int dia;
-    private EditText campoFecha;
+    private TextView campoFecha;
     private Button botonFecha;
     private TextView fechasis;
     private static final int ID_DIALOGO=0;
@@ -33,7 +35,7 @@ public class nuevo extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuevo);
-        campoFecha=(EditText) findViewById(R.id.campoFecha);
+        campoFecha=(TextView) findViewById(R.id.campoFecha);
         botonFecha=(Button) findViewById(R.id.butonFecha);
         fechasis=(TextView) findViewById(R.id.fechaSis);
         Calendar calendario= Calendar.getInstance();
@@ -75,5 +77,9 @@ public class nuevo extends Activity {
     }
 
 
-}
+        }
+
+
+
+
 
