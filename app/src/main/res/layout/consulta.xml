@@ -28,7 +28,7 @@
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Prestviente"
+        android:text="Prestaviente"
         android:id="@+id/tipo_text"
         android:layout_alignBottom="@+id/id_txt"
         android:layout_toRightOf="@+id/id_txt"
@@ -36,14 +36,14 @@
         android:layout_marginLeft="21dp"
         android:layout_marginStart="21dp" />
     <TextView
-        android:layout_width="100dp"
+        android:layout_width="115dp"
         android:layout_height="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="FechaDevolucion"
+        android:text="Fecha Devolucion"
         android:id="@+id/nombreO_txt"
         android:layout_alignTop="@+id/tipo_text"
         android:layout_toRightOf="@+id/tipo_text"
         android:layout_toEndOf="@+id/tipo_text"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginStart="20dp" />
 </RelativeLayout>

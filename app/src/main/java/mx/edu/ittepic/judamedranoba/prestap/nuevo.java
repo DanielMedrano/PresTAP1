@@ -98,7 +98,9 @@ public class nuevo extends Activity {
               if (ValidarFecha()){
                Prestamo prestamo = new Prestamo(nombreobj.getText().toString(), descrip.getText().toString(), fechasis.getText().toString(), campoFecha.getText().toString(), status, nombrePre.getText().toString());
               dbHelper.addprestamo(prestamo);
-              confirmacion();}
+              confirmacion();
+                  limpiarpantalla();
+              }
             else{
                   Toast.makeText(this,"Fecha invalida",
                           Toast.LENGTH_LONG).show();
@@ -156,7 +158,12 @@ public class nuevo extends Activity {
         dlgAlert.setCancelable(true);
         dlgAlert.create().show();
     }
-
+public void limpiarpantalla(){
+    nombreobj.setText("");
+    nombrePre.setText("");
+    descrip.setText("");
+    campoFecha.setText("");
+}
         }
 
 
