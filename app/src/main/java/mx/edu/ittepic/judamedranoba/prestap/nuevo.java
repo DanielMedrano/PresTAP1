@@ -33,6 +33,9 @@ public class nuevo extends Activity {
     private int año;
     private int mes;
     private int dia;
+    private int año1;
+    private int mes1;
+    private int dia1;
     private TextView campoFecha;
     private Button botonFecha;
     private TextView fechasis;
@@ -59,9 +62,9 @@ public class nuevo extends Activity {
         oyenteSelectorFecha=new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-               año=year;
-                mes=monthOfYear;
-                dia=dayOfMonth;
+               año1=year;
+                mes1=monthOfYear;
+                dia1=dayOfMonth;
                 mostrarFecha();
             }
         };
@@ -83,18 +86,61 @@ public class nuevo extends Activity {
             showDialog(ID_DIALOGO);
         }
     public void mostrarFecha(){
-        campoFecha.setText(año+"/"+(mes+1)+"/"+dia);
+        campoFecha.setText(año1+"/"+(mes1+1)+"/"+dia1);
     }
     public void mostrarSis(){
         fechasis.setText(año+"/"+(mes+1)+"/"+dia);
     }
 
       public void guardar(View view){
-          Prestamo prestamo = new Prestamo(nombreobj.getText().toString(),descrip.getText().toString(),fechasis.getText().toString(),campoFecha.getText().toString(), status, nombrePre.getText().toString());
-          dbHelper.addprestamo(prestamo);
-          confirmacion();
+
+          if(ValidarCam()) {
+              if (ValidarFecha()){
+               Prestamo prestamo = new Prestamo(nombreobj.getText().toString(), descrip.getText().toString(), fechasis.getText().toString(), campoFecha.getText().toString(), status, nombrePre.getText().toString());
+              dbHelper.addprestamo(prestamo);
+              confirmacion();}
+            else{
+                  Toast.makeText(this,"Fecha invalida",
+                          Toast.LENGTH_LONG).show();
+              }
+          } else{
+              Toast.makeText(this,"Ha dejado campos vacios ",
+                      Toast.LENGTH_LONG).show();
+
+          }
 
       }
+    public  boolean ValidarCam(){
+        String campoFecha=this.campoFecha.getText().toString();
+        if (TextUtils.isEmpty(campoFecha)){
+            return false;
+        }
+        String nombrePre=this.nombrePre.getText().toString();
+        if (TextUtils.isEmpty(nombrePre)){
+            return false;
+        }
+        String nombreObj=this.nombreobj.getText().toString();
+        if (TextUtils.isEmpty(nombreObj)){
+            return false;
+        }
+        String descrip= this.descrip.getText().toString();
+        if(TextUtils.isEmpty(descrip)){
+            return false;
+        }
+        return true;
+    }
+    public boolean ValidarFecha(){
+
+
+        if(this.año1 >= this.año && this.mes1 > this.mes ){
+            return  true;
+        }
+        if (this.año1 >=this.año && this.mes1== this.mes && this.dia1 > this.dia ){
+            return true;
+        }
+
+        return false;
+    }
 
     public void confirmacion(){
 
