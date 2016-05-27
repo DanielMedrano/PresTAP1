@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".acerca"></activity>
         <activity android:name=".nuevo"></activity>
+        <activity android:name=".consulta_prestamo"></activity>
     </application>
 
 </manifest>

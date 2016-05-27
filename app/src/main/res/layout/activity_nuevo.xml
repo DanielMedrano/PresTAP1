@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="mx.edu.ittepic.judamedranoba.prestap.nuevo">
+    tools:context="mx.edu.ittepic.judamedranoba.prestap.consulta_prestamo">
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -120,5 +120,6 @@
       android:text="Guardar"
       android:layout_marginRight="15dp"
       android:id="@+id/guardar"
-      android:layout_gravity="right" />
+      android:layout_gravity="right"
+      android:onClick="guardar"/>
 </LinearLayout>

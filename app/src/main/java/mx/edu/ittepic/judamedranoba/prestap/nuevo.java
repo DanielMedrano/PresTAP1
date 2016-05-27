@@ -2,6 +2,8 @@ package mx.edu.ittepic.judamedranoba.prestap;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Bundle;
@@ -21,6 +23,13 @@ import java.util.Calendar;
 
 
 public class nuevo extends Activity {
+
+    DBHelper dbHelper;
+    EditText nombrePre;
+    EditText nombreobj;
+    EditText descrip;
+    String status = "Prestado";
+
     private int año;
     private int mes;
     private int dia;
@@ -35,6 +44,10 @@ public class nuevo extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuevo);
+        dbHelper = new DBHelper(this);
+        nombrePre = (EditText) findViewById(R.id.nombrePre);
+        nombreobj = (EditText) findViewById(R.id.nombreObj);
+        descrip = (EditText) findViewById(R.id.descrip);
         campoFecha=(TextView) findViewById(R.id.campoFecha);
         botonFecha=(Button) findViewById(R.id.butonFecha);
         fechasis=(TextView) findViewById(R.id.fechaSis);
@@ -76,6 +89,27 @@ public class nuevo extends Activity {
         fechasis.setText(año+"/"+(mes+1)+"/"+dia);
     }
 
+      public void guardar(View view){
+          Prestamo prestamo = new Prestamo(nombreobj.getText().toString(),descrip.getText().toString(),fechasis.getText().toString(),campoFecha.getText().toString(), status, nombrePre.getText().toString());
+          dbHelper.addprestamo(prestamo);
+          confirmacion();
+
+      }
+
+    public void confirmacion(){
+
+        AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+        dlgAlert.setMessage("Se ha agregado exitosamente!");
+        dlgAlert.setTitle("Agregar Objeto");
+        dlgAlert.setPositiveButton("Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        //dismiss the dialog
+                    }
+                });
+        dlgAlert.setCancelable(true);
+        dlgAlert.create().show();
+    }
 
         }
 
